@@ -35,7 +35,7 @@
 ##     3        Brazilian version of PAL - 525/60 rather than 625/50, different
 ##              subcarrier
 ##
-#sdtv_mode=0
+sdtv_mode=2
 
 ## sdtv_aspect
 ##     defines the aspect ratio for composite output
@@ -46,7 +46,7 @@
 ##     2        14:9
 ##     3        16:9
 ##
-#sdtv_aspect=1
+sdtv_aspect=1
 
 ## sdtv_disable_colourburst
 ##     Disables colour burst on composite output. The picture will be
@@ -57,7 +57,7 @@
 ##     0        Colour burst is enabled (Default)
 ##     1        Colour burst is disabled
 ##
-#sdtv_disable_colourburst=1
+sdtv_disable_colourburst=0
 
 ################################################################################
 ##  HDMI mode options
@@ -76,7 +76,7 @@
 ##                                  overscan_left=24, overscan_right=24,
 ##                                  overscan_top=24, overscan_bottom=24)
 ##
-#hdmi_safe=1
+hdmi_safe=1
 
 ## hdmi_ignore_edid
 ##     Enables the ignoring of EDID/display data
@@ -92,7 +92,7 @@
 ##     0        Read EDID data from attached device (Default)
 ##     1        Read EDID data from edid.txt file
 ##
-#hdmi_edid_file=1
+hdmi_edid_file=0
 
 ## hdmi_force_edid_audio
 ##     Pretends all audio formats are supported by display, allowing
@@ -103,7 +103,7 @@
 ##     0        Use EDID provided values (Default)
 ##     1        Pretend all audio formats are supported
 ##
-#hdmi_force_edid_audio=1
+hdmi_force_edid_audio=0
 
 ## hdmi_ignore_edid_audio
 ##     Pretends all audio formats are unsupported by display. This means ALSA
@@ -114,7 +114,7 @@
 ##     0        Use EDID provided values (Default)
 ##     1        Pretend all audio formats are unsupported
 ##
-#hdmi_ignore_edid_audio=1
+hdmi_ignore_edid_audio=0
 
 ## hdmi_force_edid_3d
 ##     Pretends all CEA modes support 3D even when edid doesn't indicate
@@ -125,7 +125,7 @@
 ##     0        Use EDID provided values (Default)
 ##     1        Pretend 3D mode is supported
 ##
-#hdmi_force_edid_3d=1
+hdmi_force_edid_3d=2
 
 ## avoid_edid_fuzzy_match
 ##     Avoid fuzzy matching of modes described in edid.
@@ -178,7 +178,7 @@
 ##     3        YCbCr limited (16-235)
 ##     4        YCbCr full    ( 0-255)
 ##
-#hdmi_pixel_encoding=1
+hdmi_pixel_encoding=0
 
 ## hdmi_blanking
 ##     The hdmi_blanking command allows you to choose whether the HDMI output
@@ -205,7 +205,7 @@
 ##     1        Normal DVI mode (No sound)
 ##     2        Normal HDMI mode (Sound will be sent if supported and enabled)
 ##
-#hdmi_drive=2
+hdmi_drive=2
 
 ## config_hdmi_boost
 ##     configure the signal strength of the HDMI interface.
@@ -221,7 +221,7 @@
 ##     6
 ##     7        Maximum
 ##
-#config_hdmi_boost=0
+config_hdmi_boost=0
 
 ## hdmi_group
 ##     Defines the HDMI type
@@ -232,7 +232,7 @@
 ##     1        CEA
 ##     2        DMT
 ##
-#hdmi_group=1
+hdmi_group=0
 
 ## hdmi_mode
 ##     defines screen resolution in CEA or DMT format
@@ -334,7 +334,7 @@
 ##     85                                       720p      60Hz
 ##     86                                       1366x768        reduced blanking
 ##
-#hdmi_mode=1
+hdmi_mode=1
 
 ## hdmi_force_mode
 ##     Setting to 1 will remove all other modes except the ones specified by
@@ -347,7 +347,7 @@
 ##     0        Disabled (Default)
 ##     1        Enabled
 ##
-#hdmi_force_mode=1
+hdmi_force_mode=1
 
 ## edid_content_type
 ##     Forces the edit content type to a specific value.
@@ -361,7 +361,7 @@
 ##     3        EDID_ContentType_Cinema, content type cinema
 ##     4        EDID_ContentType_Game, content type game
 ##
-#edid_content_type=1
+edid_content_type=1
 
 ################################################################################
 ##  LCD Display/Touchscreen Options
@@ -377,7 +377,7 @@
 ##     0        Detect LCD on I2C (Default)
 ##     1        Skip LCD detection
 ##
-#ignore_lcd=1
+ignore_lcd=1
 
 ## display_default_lcd
 ##     If a Raspberry Pi DSI LCD is detected it will be used as the default
@@ -392,13 +392,13 @@
 ##     0        LCD will not be used as default display
 ##     1        LCD will be used as default display (Default)
 ##
-#display_default_lcd=0
+display_default_lcd=1
 
 ## lcd_framerate
 ##     Specify the framerate of the Raspberry Pi LCD display, in Hertz/fps.
 ##     Defaults to 60Hz.
 ##
-#lcd_framerate=60
+lcd_framerate=60
 
 ## lcd_rotate
 ##     This flips the display using the LCD's inbuilt flip functionality, which
@@ -411,7 +411,7 @@
 ##     2        180 degrees rotation
 ##     3        270 degrees rotation
 ##
-#lcd_rotate=0
+lcd_rotate=2
 
 ## disable_touchscreen
 ##     Enable/disable the touchscreen.
@@ -421,7 +421,7 @@
 ##     0        Enable touchscreen (Default)
 ##     1        Disable touchscreen
 ##
-#disable_touchscreen=0
+disable_touchscreen=0
 
 ## enable_dpi_lcd
 ##     Enable LCD displays attached to the DPI GPIOs. This is to allow the use
@@ -432,7 +432,7 @@
 ##     0        Disabled (Default)
 ##     1        Enabled
 ##
-#enable_dpi_lcd=0
+enable_dpi_lcd=0
 
 ## dpi_group
 ##     Defines the DPI type
@@ -443,7 +443,7 @@
 ##     1        CEA
 ##     2        DMT
 ##
-#dpi_group=1
+dpi_group=0
 
 ## dpi_mode
 ##     defines screen resolution in CEA or DMT format
@@ -545,7 +545,7 @@
 ##     85                                       720p      60Hz
 ##     86                                       1366x768        reduced blanking
 ##
-#dpi_mode=1
+dpi_mode=1
 
 ## dpi_output_format
 ##     dpi_output_format is a bitmask specifying various parameters used to set
@@ -555,7 +555,7 @@
 ##     here:
 ##     https://www.raspberrypi.org/documentation/hardware/raspberrypi/dpi/README.md
 ##
-#dpi_output_format=0x6f005
+dpi_output_format=0x6f005
 
 ################################################################################
 ##  Generic Display Options
@@ -570,7 +570,7 @@
 ##     0        Disabled (Default)
 ##     1        Use HDMI mode even if no HDMI monitor is detected
 ##
-#hdmi_force_hotplug=1
+hdmi_force_hotplug=1
 
 ## hdmi_ignore_hotplug
 ##     Pretends HDMI hotplug signal is not asserted so it appears a HDMI
@@ -581,7 +581,7 @@
 ##     0        Disabled (Default)
 ##     1        Use composite mode even if HDMI monitor is detected
 ##
-#hdmi_ignore_hotplug=1
+hdmi_ignore_hotplug=1
 
 ## disable_overscan
 ##     Set to 1 to disable overscan
@@ -591,12 +591,12 @@
 ##     0        Overscan Enabled (Default)
 ##     1        Overscan Disabled
 ##
-#disable_overscan=1
+disable_overscan=1
 
 ## overscan_left
 ##     Number of pixels to skip on left
 ##
-#overscan_left=0
+overscan_left=0
 
 ## overscan_right
 ##     Number of pixels to skip on right
@@ -611,7 +611,7 @@
 ## overscan_bottom
 ##     Number of pixels to skip on bottom
 ##
-#overscan_bottom=0
+overscan_bottom=0
 
 ## overscan_scale
 ##     Set overscan_scale to 1 to force any non-framebuffer layers to conform
@@ -622,7 +622,7 @@
 ##     0        Disabled (Default)
 ##     1        Force overscan scale
 ##
-#overscan_scale=0
+overscan_scale=0
 
 ## framebuffer_width
 ##     Console framebuffer width in pixels. Default is display width minus
@@ -634,19 +634,19 @@
 ##     Specifies the maximum height that the internal frame buffer is
 ##     allowed to be
 ##
-#max_framebuffer_height=0
+max_framebuffer_height=0
 
 ## max_framebuffer_width
 ##     Specifies the maximum width that the internal frame buffer is
 ##     allowed to be
 ##
-#max_framebuffer_width=0
+max_framebuffer_width=0
 
 ## framebuffer_height
 ##     Console framebuffer height in pixels. Default is display height minus
 ##     overscan.
 ##
-#framebuffer_height=0
+framebuffer_height=0
 
 ## framebuffer_depth
 ##     Console framebuffer depth in bits per pixel.
@@ -659,7 +659,7 @@
 ##     32       Has no corruption issues but needs framebuffer_ignore_alpha=1
 ##              and shows the wrong colors as of 2012/06/15
 ##
-#framebuffer_depth=16
+framebuffer_depth=16
 
 ## framebuffer_ignore_alpha
 ##     Set to 1 to disable alpha channel. Helps with 32bit.
@@ -669,7 +669,7 @@
 ##     0        Enable Alpha Channel (Default)
 ##     1        Disable Alpha Channel
 ##
-#framebuffer_ignore_alpha=0
+framebuffer_ignore_alpha=0
 
 ## test_mode
 ##     Enable test sound/image during boot for manufacturing test.
@@ -679,7 +679,7 @@
 ##     0        Disable Test Mod (Default)
 ##     1        Enable Test Mode
 ##
-#test_mode=0
+test_mode=0
 
 ## display_hdmi_rotate
 ##     Use display_hdmi_rotate to rotate or flip the HDMI display orientation.
@@ -694,7 +694,7 @@
 ##     0x10000  Horizontal flip
 ##     0x20000  Vertical flip
 ##
-#display_hdmi_rotate=0
+display_hdmi_rotate=2
 
 ## display_lcd_rotate
 ##     Use display_lcd_rotate to rotate or flip the LCD display orientation.
@@ -709,7 +709,7 @@
 ##     0x10000  Horizontal flip
 ##     0x20000  Vertical flip
 ##
-#display_lcd_rotate=0
+display_lcd_rotate=2
 
 ## display_rotate
 ##     display_rotate is deprecated in the latest firmware but has been retained
@@ -727,14 +727,14 @@
 ##     0x10000  Horizontal flip
 ##     0x20000  Vertical flip
 ##
-#display_rotate=0
+display_rotate=2
 
 ## dispmanx_offline
 ##     Set to "1" to enable offline compositing
 ##
 ##     Default 0
 ##
-#dispmanx_offline=0
+dispmanx_offline=1
 
 ################################################################################
 ##  Licensed Codecs
@@ -749,12 +749,11 @@
 ## decode_MPG2
 ##     License key to allow hardware MPEG-2 decoding.
 ##
-#decode_MPG2=0x12345678
+decode_MPG2=0x12345678
 
 ## decode_WVC1
 ##     License key to allow hardware VC-1 decoding.
-##
-#decode_WVC1=0x12345678
+##decode_WVC1=0x12345678
 
 ################################################################################
 ##  Camera Settings
@@ -780,25 +779,25 @@
 ##
 ##     Default 64
 ##
-#gpu_mem=128
+gpu_mem=128
 
 ## gpu_mem_256
 ##     GPU memory allocation in MB for 256MB board revision.
 ##     This option overrides gpu_mem.
 ##
-#gpu_mem_256=192
+gpu_mem_256=192
 
 ## gpu_mem_512
 ##     GPU memory allocation in MB for 512MB board revision.
 ##     This option overrides gpu_mem.
 ##
-#gpu_mem_512=448
+gpu_mem_512=448
 
 ## gpu_mem_1024
 ##     GPU memory allocation in MB for 1024MB board revision.
 ##     This option overrides gpu_mem.
 ##
-#gpu_mem_1024=944
+gpu_mem_1024=944
 
 ## disable_l2cache
 ##     Disable arm access to GPU's L2 cache. Needs corresponding L2 disabled
@@ -809,7 +808,7 @@
 ##     0        Enable L2 Cache (Default)
 ##     1        Disable L2 cache
 ##
-#disable_l2cache=0
+disable_l2cache=0
 
 
 ################################################################################
@@ -827,7 +826,7 @@
 ##     0        Enable dither (Default)
 ##     1        Disable dither
 ##
-#disable_audio_dither=0
+disable_audio_dither=0
 
 ## enable_audio_dither
 ##     Audio dither (see disable_audio_dither above) is normally disabled when
@@ -839,7 +838,7 @@
 ##     0        Disable dither (Default)
 ##     1        Enable dither
 ##
-#enable_audio_dither=0
+enable_audio_dither=0
 
 ## pwm_sample_bits
 ##     The pwm_sample_bits command adjusts the bit depth of the analogue audio
@@ -848,7 +847,7 @@
 ##     frequency too low to support. This is generally only useful as a
 ##     demonstration of how bit depth affects quantisation noise.
 ##
-#pwm_sample_bits=11
+pwm_sample_bits=11
 
 ################################################################################
 ##  Boot Option Settings
@@ -858,12 +857,12 @@
 ##     Stop start.elf from filling in ATAGS (memory from 0x100) before
 ##     launching kernel
 ##
-#disable_commandline_tags=0
+disable_commandline_tags=0
 
 ## cmdline (string)
 ##     Command line parameters. Can be used instead of cmdline.txt file
 ##
-#cmdline=""
+cmdline=""
 
 ## kernel (string)
 ##     Alternative name to use when loading kernel.
@@ -873,7 +872,7 @@
 ## kernel_address
 ##     Address to load kernel.img file at
 ##
-#kernel_address=0x00000000
+kernel_address=0x00000000
 
 ## kernel_old
 ##     Support loading old kernels
@@ -883,7 +882,7 @@
 ##     0        Disabled (Default)
 ##     1        Load kernel at address 0x00000000
 ##
-#kernel_old=1
+kernel_old=1
 
 ## ramfsfile (string)
 ##     ramfs file to load
@@ -893,7 +892,7 @@
 ## ramfsaddr
 ##     Address to load ramfs file at
 ##
-#ramfsaddr=0x00000000
+ramfsaddr=0x00000000
 
 ## initramfs (string address)
 ##     ramfs file and address to load it at (it's like ramfsfile+ramfsaddr in
@@ -902,12 +901,12 @@
 ##     NOTE: this option uses different syntax than all other options - you
 ##           should not use "=" character here.
 ##
-#initramfs initramf.gz 0x00800000
+initramfs initramf.gz 0x00800000
 
 ## device_tree_address
 ##     Address to load device_tree at
 ##
-#device_tree_address=0x00000000
+device_tree_address=0x00000000
 
 ## init_uart_baud
 ##     Initial uart baud rate.
@@ -921,7 +920,7 @@
 ##
 ##     Default 3000000 (3MHz)
 ##
-#init_uart_clock=3000000
+init_uart_clock=3000000
 
 ## boot_delay
 ##     Wait for a given number of seconds in start.elf before loading
@@ -931,7 +930,7 @@
 ##
 ##     Default 1
 ##
-#boot_delay=0
+boot_delay=0
 
 ## boot_delay_ms
 ##     Wait for a given number of milliseconds in start.elf before loading
@@ -941,7 +940,7 @@
 ##
 ##     Default 0
 ##
-#boot_delay_ms=0
+boot_delay_ms=0
 
 ## disable_splash
 ##     Avoids the rainbow splash screen on boot.
@@ -951,7 +950,7 @@
 ##     0        Splash screen enabled (Default)
 ##     1        Splash screen disabled
 ##
-#disable_splash=1
+disable_splash=1
 
 ################################################################################
 ##  Overclocking Settings
@@ -994,7 +993,7 @@
 ##              and SDRAM.
 ##              Overclocking of h264_freq, v3d_freq and isp_freq is allowed.
 ##
-#force_turbo=0
+force_turbo=0
 
 ## initial_turbo
 ##     Enables turbo mode from boot for the given value in seconds (up to 60)
@@ -1003,7 +1002,7 @@
 ##
 ##     Default 0
 ##
-#initial_turbo=0
+initial_turbo=0
 
 ## temp_limit
 ##     Overheat protection. Sets clocks and voltages to default when the SoC
@@ -1012,28 +1011,28 @@
 ##
 ##     Default 85
 ##
-#temp_limit=85
+temp_limit=85
 
 ## arm_freq
 ##     Frequency of ARM in MHz.
 ##
 ##     Default 700.
 ##
-#arm_freq=700
+arm_freq=700
 
 ## arm_freq_min
 ##     Minimum frequency of ARM in MHz (used for dynamic clocking).
 ##
 ##     Default 700.
 ##
-#arm_freq_min=700
+arm_freq_min=700
 
 ## gpu_freq
 ##     Sets core_freq, h264_freq, isp_freq, v3d_freq together.
 ##
 ##     Default 250.
 ##
-#gpu_freq=250
+gpu_freq=250
 
 ## core_freq
 ##     Frequency of GPU processor core in MHz. It has an impact on ARM
@@ -1041,7 +1040,7 @@
 ##
 ##     Default 250.
 ##
-#core_freq=250
+core_freq=250
 
 ## core_freq_min
 ##     Minimum frequency of GPU processor core in MHz (used for dynamic
@@ -1049,42 +1048,42 @@
 ##
 ##     Default 250.
 ##
-#core_freq_min=250
+core_freq_min=250
 
 ## h264_freq
 ##     Frequency of hardware video block in MHz.
 ##
 ##     Default 250.
 ##
-#h264_freq=250
+h264_freq=250
 
 ## isp_freq
 ##     Frequency of image sensor pipeline block in MHz.
 ##
 ##     Default 250.
 ##
-#isp_freq=250
+isp_freq=250
 
 ## v3d_freq
 ##     Frequency of 3D block in MHz.
 ##
 ##     Default 250.
 ##
-#v3d_freq=250
+v3d_freq=250
 
 ## sdram_freq
 ##     Frequency of SDRAM in MHz.
 ##
 ##     Default 400.
 ##
-#sdram_freq=400
+sdram_freq=400
 
 ## sdram_freq_min
 ##     Minimum frequency of SDRAM in MHz (used for dynamic clocking).
 ##
 ##     Default 400.
 ##
-#sdram_freq_min=400
+sdram_freq_min=400
 
 ## avoid_pwm_pll
 ##     Don't dedicate a pll to PWM audio. This will reduce analogue audio
@@ -1097,7 +1096,7 @@
 ##     0        Linked core_freq (Default)
 ##     1        Unlinked core_freq
 ##
-#avoid_pwm_pll=1
+avoid_pwm_pll=1
 
 ################################################################################
 ##  Voltage Settings
@@ -1108,7 +1107,7 @@
 ##     hitting a reboot failure when overclocking too high.
 ##     May set warrany bit.
 ##
-#current_limit_override=0x5A000020
+current_limit_override=0x5A000020
 
 ## over_voltage
 ##     ARM/GPU core voltage adjust.
@@ -1142,7 +1141,7 @@
 ##     7        1.375 V (requires force_turbo=1 or current_limit_override)
 ##     8        1.4   V (requires force_turbo=1 or current_limit_override)
 ##
-#over_voltage=0
+over_voltage=0
 
 ## over_voltage_min
 ##     Minimum ARM/GPU core voltage adjust (used for dynamic clocking).
@@ -1175,7 +1174,7 @@
 ##     7        1.375 V (requires force_turbo=1)
 ##     8        1.4   V (requires force_turbo=1)
 ##
-#over_voltage_min=0
+over_voltage_min=0
 
 ## over_voltage_sdram
 ##     Sets over_voltage_sdram_c, over_voltage_sdram_i, over_voltage_sdram_p
@@ -1209,7 +1208,7 @@
 ##     7        1.375 V
 ##     8        1.4   V
 ##
-#over_voltage_sdram=0
+over_voltage_sdram=0
 
 ## over_voltage_sdram_c
 ##     SDRAM controller voltage adjust.
@@ -1242,7 +1241,7 @@
 ##     7        1.375 V
 ##     8        1.4   V
 ##
-#over_voltage_sdram_c=0
+over_voltage_sdram_c=0
 
 ## over_voltage_sdram_i
 ##     SDRAM I/O voltage adjust.
@@ -1275,7 +1274,7 @@
 ##     7        1.375 V
 ##     8        1.4   V
 ##
-#over_voltage_sdram_i=0
+over_voltage_sdram_i=0
 
 ## over_voltage_sdram_p
 ##     SDRAM phy voltage adjust.
@@ -1308,7 +1307,7 @@
 ##     7        1.375 V
 ##     8        1.4   V
 ##
-#over_voltage_sdram_p=0
+over_voltage_sdram_p=0
 
 ################################################################################
 ##  USB Power
@@ -1322,7 +1321,7 @@
 ##
 ##     Default 0.
 ##
-#max_usb_current=0
+max_usb_current=0
 
 ################################################################################
 ##  Base Device Tree Parameters
@@ -1333,14 +1332,14 @@
 ##
 ##     Default off.
 ##
-#dtparam=audio=off
+dtparam=audio=off
 
 ## i2c_arm
 ##     Enable the ARM's i2c interface
 ##
 ##     Default off.
 ##
-#dtparam=i2c_arm=off
+dtparam=i2c_arm=off
 
 ## i2c_vc
 ##     Enable the i2c interface
@@ -1349,56 +1348,56 @@
 ##
 ##     Default off.
 ##
-#dtparam=i2c_vc=off
+dtparam=i2c_vc=off
 
 ## i2c_arm_baudrate
 ##     Set the baudrate of the ARM's i2c interface
 ##
 ##     Default 100000.
 ##
-#dtparam=i2c_arm_baudrate=100000
+dtparam=i2c_arm_baudrate=100000
 
 ## i2c_vc_baudrate
 ##     Set the baudrate of the VideoCore i2c interface
 ##
 ##     Default 100000.
 ##
-#dtparam=i2c_vc_baudrate=100000
+dtparam=i2c_vc_baudrate=100000
 
 ## i2s
 ##     Set to "on" to enable the i2s interface
 ##
 ##     Default off.
 ##
-#dtparam=i2s=off
+dtparam=i2s=off
 
 ## spi
 ##     Set to "on" to enable the spi interfaces
 ##
 ##     Default off.
 ##
-#dtparam=spi=off
+dtparam=spi=off
 
 ## random
 ##     Set to "on" to enable the hardware random
 ##
 ##     Default off.
 ##
-#dtparam=random=off
+dtparam=random=off
 
 ## uart0
 ##     Set to "off" to disable uart0
 ##
 ##     Default on.
 ##
-#dtparam=uart0=on
+dtparam=uart0=on
 
 ## watchdog
 ##     Set to "on" to enable the hardware watchdog
 ##
 ##     Default off.
 ##
-#dtparam=watchdog=off
+dtparam=watchdog=off
 
 ## act_led_trigger
 ##     Choose which activity the LED tracks.
@@ -1407,14 +1406,14 @@
 ##
 ##     Default mmc.
 ##
-#dtparam=act_led_trigger=mmc
+dtparam=act_led_trigger=mmc
 
 ## act_led_activelow
 ##     Set to "on" to invert the sense of the LED
 ##
 ##     Default off.
 ##
-#dtparam=act_led_activelow=off
+dtparam=act_led_activelow=off
 
 ## act_led_gpio
 ##     Set which GPIO to use for the activity LED
@@ -1423,7 +1422,7 @@
 ##
 ##     Default 16 on a non-Plus board, 47 on a Plus or Pi 2.
 ##
-#dtparam=act_led_gpio=47
+dtparam=act_led_gpio=47
 
 ## pwr_led_trigger
 ##     Choose which activity the LED tracks.
@@ -1434,7 +1433,7 @@
 ##
 ##     Default mmc.
 ##
-#dtparam=pwr_led_trigger=mmc
+dtparam=pwr_led_trigger=mmc
 
 ## pwr_led_activelow
 ##     Set to "on" to invert the sense of the LED
@@ -1443,7 +1442,7 @@
 ##
 ##     Default off.
 ##
-#dtparam=pwr_led_activelow=off
+dtparam=pwr_led_activelow=off
 
 ## pwr_led_gpio
 ##     Set which GPIO to use for the PWR LED
@@ -1454,7 +1453,7 @@
 ##
 ##     Default 35.
 ##
-#dtparam=pwr_led_gpio=35
+dtparam=pwr_led_gpio=35
 
 ################################################################################
 ##  Base Device Tree Overlays
@@ -1467,4 +1466,4 @@
 ##
 ##     Information can be found in overlays/README
 ##
-#dtoverlay=act-led,activelow=off
+dtoverlay=act-led,activelow=off
